@@ -1,3 +1,226 @@
-.header-colored {
-  color: #2196f3;
+/* Палитра Цветов
+      Логотип
+Цвет логотипа: синий #2196F3;
+Цвет логотипа: черный #000000;
+Цвет логотипа: белый #FFFFFF;
+      Текст
+Цвет заголовков: темный #212121
+Цвет параграфов, контакты на белом фоне: серый #757575
+Контакты на сером фоне: rgba(255, 255, 255, 0.6)
+      Фон
+Основной цвет фона белый #FFFFFF
+Основной цвет фона темный #2F303A
+Вторичный цвет фона светло-серый #F5F4FA
+      Кнопки
+Основной цвет кнопок синий #2196F3
+Цвет :hover на синих кнопках синий #188CE8
+Основной цвет кнопок серый #F5F4FA
+Цвет :hover на серых кнопках синий #2196F3
+*/
+/* Fonts
+Logo Raleway 700; 
+h1 p: Roboto 900
+h2 p: Roboto 700
+li,h3 Roboto 500
+p Roboto 400 */
+:root {
+  --main-color: #FFFFFF;
+  --header-logo-color: #000000;
+  --accent-color: #2196F3;
+  --title-color: #212121;
+  --text-color: #757575;
+  --text-color-secondary: rgba(255, 255, 255, 0.6);
+  --bg-color-first: #2F303A;
+  --bg-color-second: #F5F4FA;
+  --btn-color-hover: #188CE8;
+}
+/* Main preferences */
+body {
+color: var(--text-color);
+background-color: var(--main-color);
+font-family: Roboto, sans-serif;
+}
+
+.list {
+  list-style: none;
+}
+
+.link{
+  text-decoration: none;
+}
+
+/* Header section */
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.header-section .logo{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header.logo {
+  color: var(--header-logo-color);
+}
+
+.site-nav .link {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+  text-shadow: none;
+}
+
+.header-contacts .link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header-contacts .link:hover,
+.header-contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* Order section */
+
+.order-section{
+  background-color: var(--bg-color-first);
+}
+.order-section-title{
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase
+}
+
+/* Button */
+
+.order-section-button{  
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  /* display: flex;
+    align-items: center; */
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.order-section-button:hover,
+.order-section-button:focus {  
+  background-color: var(--btn-color-hover);
+}
+
+/* Advantages section */
+
+.advantages-section .title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.advantages-section .text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+/* Services section */
+.services-section .title,
+.team-section .title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Team section */
+.team-section{
+  background-color: var(--bg-color-second);
+}
+
+.team-section .worker {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+
+}
+.team-section .text {
+  font-size: 16px;
+  line-height: 1.19;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+
+}
+
+/* Footer section */
+.footer-section {
+background-color: var(--bg-color-first);
+}
+.footer.logo {
+  color: var(--main-color);
+}
+.footer-section .contacts {
+  color: var(--text-color-secondary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+.footer-section .address {
+color: var(--main-color);
+}
+
+/* Portfolio */
+.portfolio-filter-button {
+  color: var(--title-color);
+  background-color:var(--bg-color-second);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus {
+  color: var(--main-color);
+  background-color: var(--accent-color);
+}
+.portfolio-content .title {
+color: var(--title-color);
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+}
+.portfolio-content .text {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.03em;
 }
